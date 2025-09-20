@@ -1,30 +1,30 @@
-// Write your solution in this file!
+// // Write your solution in this file!
 
 const employee = {
-  name: "Alice Johnson",
-  streetAddress: "42 Main Street"
-};
+    name: "Sam",
+    streetAddress: "11 Broadway",
+}
 
-function updateEmployeeWithKeyAndValue(employee, key, value) {
-  return {
-    ...employee,      // copy all existing properties
-    [key]: value      // update (or add) the key with the new value
-  };
+function updateEmployeeWithKeyAndValue (employee, key, value) {
+    return {
+        ...employee,
+        [key]: value,
+    }
 }
 
 function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
-  employee[key] = value; // change the object directly
-  return employee;
+    employee [key] = value
+    return employee
+    
 }
 
-function deleteFromEmployeeByKey(employee, key) {
-  const newEmployee = { ...employee }; // shallow copy
-  delete newEmployee[key];             // remove property
-  return newEmployee;
+function deleteFromEmployeeByKey (employee, key, value) {
+    const newEmployee = { ...employee };
+    delete newEmployee[key];
+    return newEmployee;
 }
 
-function destructivelyDeleteFromEmployeeByKey(employee, key) {
-  delete employee[key]; // directly remove property
-  return employee;
+function destructivelyDeleteFromEmployeeByKey(employee, key, value) {
+    employee[key] = value;
+    return employee;
 }
-
